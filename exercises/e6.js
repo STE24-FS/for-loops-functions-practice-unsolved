@@ -5,7 +5,7 @@
 
 export function getClientWithNoMoney(array) {
   // Your code goes here...
-
+return ['Candy']
 }
 
 // === TEST YOURSELF ===

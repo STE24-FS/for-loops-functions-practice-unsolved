@@ -9,8 +9,13 @@
 // Phil's Account Object
 // ]
 
-export function getAllAccountsWithSumsOfDepositsLess2000(array) {}
-
+export function getAllAccountsWithSumsOfDepositsLess2000(array) {
+return array.filter(account => {
+  if (!account.deposits) return true; 
+  const sumOfDeposits = account.deposits.reduce((sum, deposit) => sum + deposit, 0);
+  return sumOfDeposits < 2000;
+});
+}
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-13"
 // If the test has all tests passed, switch to the next exercise file

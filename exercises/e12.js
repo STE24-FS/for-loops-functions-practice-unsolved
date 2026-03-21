@@ -6,7 +6,11 @@
 
 export function getAllDepositsGreaterThanOneHundred(array) {
   // Your code goes here...
-
+return array.reduce((acc, account) => {
+  if (!account.deposits) return acc;
+  const depositsGreaterThan100 = account.deposits.filter(deposit => deposit > 100);
+  return acc.concat(depositsGreaterThan100);
+}, []);
 }
 
 
